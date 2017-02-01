@@ -650,7 +650,7 @@ static NSString * kUIImageSize = @"kUIImageSize";
                                                 CGImageGetBitsPerComponent(imageRef),
                                                 0,
                                                 colorSpaceRef,
-                                                CGImageGetBitmapInfo(imageRef));
+                                                kCGImageAlphaPremultipliedLast);
     
     // Rotate and/or flip the image if required by its orientation
     CGContextConcatCTM(bitmap, transform);
